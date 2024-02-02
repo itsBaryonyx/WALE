@@ -1,0 +1,73 @@
+/* leftnavbar.css */
+
+.leftnavbarcontainer {
+  background-color: #A8F2FE;
+  color: #171F44;
+  left: 5%;
+  width: 10%;
+  height: 82%;
+  position: absolute;
+  right: 2%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+.leftnavbarinside {
+  display: flex; /* Add display: flex to apply flex properties */
+  flex-direction: column;
+  text-align: center; /* Center the text within the container */
+}
+
+.leftnavbarinsidebuttons a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px; /* Increase margin for more space between links */
+  font-size: 1.2em; /* Apply font size to all links */
+  display: block; /* Make the links block-level to center text */
+}
+
+.leftnavbarinsidebuttons a:hover {
+  color: white;
+}
+
+.time {
+  position: relative; /* Change position to relative */
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.speed {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.perimeter {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.area {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.volume {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.temperature {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.meterreading {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,84 @@
+/* navbaroutside.css */
+
+body {
+  margin: 10px;
+  font-family: 'Baloo', sans-serif;
+}
+
+.navbarinside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A8F2FE; /* Set your desired background color */
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
+  padding: 0px 20px;
+  width: 90%;
+  height: 10%;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.logoinside {
+  height: 80px; /* Adjust the height to make the logo smaller */
+  position: absolute;
+  left: 2%;
+}
+
+.navbarinsidelogo {
+  position: absolute;
+  text-decoration: none;
+  left: 10%;
+  font-size: 1.5em;
+  color: #171F44;
+}
+
+.navbarinsidelogo:hover {
+  color: white;
+}
+
+.navbarinsidebuttons {
+  font-size: 1.2em;
+  position: absolute;
+  left: 50%; /* Center the buttons horizontally */
+  transform: translateX(-50%); /* Adjust to center precisely */
+}
+
+.homeinside {
+  padding-right: 20px;
+}
+
+.contactinside {
+  padding-left: 20px;
+}
+
+.navbarinsidebuttons a {
+  text-decoration: none;
+  color: #171F44; /* Set your default text color */
+  margin-left: 15px;
+  font-weight: bold;
+  transition: color 0.3s; /* Add smooth transition for color change */
+}
+
+/* Change text color to white on hover */
+.navbarinsidebuttons a:hover {
+  color: white;
+}
+
+.logout {
+  display: flex;
+  font-size: 1.2em;
+  background-color: #00A2FF; /* Set your desired background color */
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
+  padding: 2px 20px;
+  color: white;
+  position: absolute;
+  right: 2%;
+  top: 25%;
+  border-radius: 20px; 
+}
+
+.logout:hover {
+  background-color: #171F44; /* Set your desired background color */
+}
