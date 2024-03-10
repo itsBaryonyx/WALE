@@ -1,154 +1,155 @@
 /* LoginComponent.css */
-  .login-box {
-    position: relative;
-    text-align: center;
-    width: 380px;
-    height: 420px;
-    background: #1c1c1c;
-    border-radius: 8px;
-    overflow: hidden;
+
+.login-box {
+  position: relative;
+  text-align: center;
+  width: 380px;
+  height: 420px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.login-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #00A2FF, #00A2FF, #00A2FF);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.login-box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #00A2FF, #00A2FF, #00A2FF);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.login-borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+
+.login-borderLine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.login-borderLine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .login-box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .login-box::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, transparent, blue, blue, blue);
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
-  }
-  
-  .login-borderLine {
-    position: absolute;
-    top: 0;
-    inset: 0;
-  }
-  
-  .login-borderLine::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -1.5s;
-  }
-  
-  .login-borderLine::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
-    z-index: 1;
-    transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay: -4.5s;
-  }
-  
-  @keyframes animate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .login-box form {
-    position: absolute;
-    inset: 4px;
-    background: #222;
-    padding: 50px 40px;
-    border-radius: 8px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-h2 {
-    color: azure;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.1em;
-  }
-  
-  .login-inputBox {
-    position: relative;
-    width: 300px;
-    margin-top: 35px;
-  }
-  
-  .login-inputBox input {
-    position: relative;
-    width: 100%;
-    padding: 20px 10px 10px;
-    background: transparent;
-    outline: none;
-    border: none;
-    box-shadow: none;
-    color: black;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    z-index: 10;
-  }
-  
-  .login-inputBox span {
-    position: absolute;
-    left: 0;
-    padding: 20px 10px 10px;
-    pointer-events: none;
-    color: whitesmoke;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-  }
-  
-  .login-inputBox input:valid ~ span,
-  .login-inputBox input:valid ~ span {
-    color: #fff;
-    font-size: 0.75em;
-    transform: translateY(-34%);
-  }
-  
-  .login-inputBox i {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: 0.5s;
-    pointer-events: none;
-  }
-  
+}
+
+.login-box form {
+  position: absolute;
+  inset: 4px;
+  background: #A8F2FE;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold; /* Make the text bold */
+  text-align: center;
+}
+
+.login-inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.login-inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: black;
+  font-size: 1em;
+  font-weight: bold; /* Make the text bold */
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.login-inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: black;
+  font-size: 1em;
+  font-weight: bold; /* Make the text bold */
+  transition: 0.5s;
+}
+
+.login-inputBox input:valid ~ span {
+  color: black;
+  font-size: 0.75em;
+  font-weight: bolds;
+  transform: translateY(-34%);
+}
+
+.login-inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
 .login-inputBox .fa-eye,
 .login-inputBox .fa-eye-slash {
   position: absolute;
@@ -159,59 +160,66 @@
   color: black; /* Default color */
 }
 
-  .login-inputBox input:valid ~ i,
-  .login-inputBox input:valid ~ i {
-    height: 50px;
-  }
-  
-  .login-box form .links {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .login-box form .links a {
-    margin: 10px 0;
-    font-size: 0.75em;
-    color: red;
-    text-decoration: none;
-  }
-  
-  .login-box form .links a:hover,
-  .login-box form .link a:nth-child(2) {
-    color: #fff;
-  }
-  .showpassword{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 10px; /* Adjust the margin-left as needed */
-    color: black;
-    font-size: 1em;
-  }
-  
-  .showpassword-text{
-    color:white;
-    padding-left: 10px;
+.login-inputBox input ~ i {
+  height: 50px;
+}
 
-  }
+.login-box form .links {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .start-learning{
-    align-self: center;
-  }
-  .start-learning {
-    border: none;
-    outline: none;
-    padding: 9px 25px;
-    background: #fff;
-    cursor: pointer;
-    font-size: 0.9em;
-    border-radius: 4px;
-    font-weight: 600;
-    width: 200px;
-    margin-top: 10px;
-  }
-  
-  .login-box form input[type="submit"]:active {
-    opacity: 0.8;
-  }
-  
+.login-box form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: red;
+  text-decoration: none;
+}
+
+.error-message{
+  color: red;
+}
+
+.login-box form .links a:hover,
+.login-box form .link a:nth-child(2) {
+  color: #fff;
+}
+
+.showpassword {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  font-size: 1em;
+}
+
+.showpassword-text {
+  color: black;
+  padding-left: 10px;
+}
+
+.start-learning {
+  align-self: center;
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: bold; /* Make the text bold */
+  width: 200px;
+  margin-top: 10px;
+  color: black; /* Default text color */
+}
+
+.start-learning:hover {
+  background: #171f44;
+  color: white;
+  text-decoration-color: white;
+}
+
+.login-box form input[type="submit"]:active {
+  opacity: 0.8;
+}

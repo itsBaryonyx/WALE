@@ -1,20 +1,66 @@
 /* ContactOutsidePage.css */
 
-body {
-    width: 100%;
-        
-      }
-      
-      .video-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        object-fit: fill;
-        z-index: -1; /* Place the video behind other content */
-      }
-      
+.contact-title {
+  position: relative;
+  text-align: center;
+  font-size: 4em;
+  color: #171F44;
+  margin-top: 10%;
+  z-index: 1;
+}
+
+.contactoutsidecontainer {
+  text-align: center;
+}
+
+.contactoutcontainer-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contactoutcontainer-column {
+  position: relative; /* Ensure positioning context for absolutely positioned elements */
+  margin-top: -2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.contactoutcontainer-column:hover {
+  transform: scale(1.2);
+  transition: .2s;
+  
+}
+
+.contactoutcontainer-column img {
+  width: 25%;
+  left: 38%;
+  height: auto;
+  position: relative; /* Ensure the image doesn't get overlapped */
+}
+
+.contact-name {
+  position: absolute;
+  top: 100%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #171F44;
+  z-index: 1; /* Ensure the name is above the image */
+}
+
+.contact-description {
+  position: absolute;
+  width: 70%;
+  top: 180%; /* Adjust as needed */
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #171F44;
+  z-index: 1; /* Ensure the description is above the image */
+}
+
+.contactoutcontainer-column img {
+  z-index: 0; /* Ensure the image is at the bottom of the stack */
+}

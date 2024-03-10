@@ -1,0 +1,172 @@
+/* mainscreenintime.css */
+
+.mainscreenincontainer-l {
+  background-color: rgba(255, 255, 255, 0.8); /* Set your desired background color */
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.8);
+  color: white;
+  left: 5%;
+  width: 90%;
+  height: 82%;
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+
+.bg2 {
+  position: absolute;
+  z-index: -1;
+  opacity: .25;
+  width: 100%;
+  height: 100%;
+  padding-top:-40%;
+  padding-right: 0;
+  object-fit:cover;
+  border-radius: 10px;
+}
+
+
+/* Style the container for the media scroller */
+.msctv {
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    padding-left: 2%;
+    padding-right: 2%;
+    /* Scrollbar styles */
+}
+
+.msctv::-webkit-scrollbar {
+    width: 15px; /* Width of the scrollbar */
+    border-radius: 6px;
+}
+
+.msctv::-webkit-scrollbar-track {
+    background: #3e4c8c; /* Color of the track */
+    border-radius: 6px;
+}
+
+.msctv::-webkit-scrollbar-thumb {
+    background: #a8f2fe; /* Color of the handle */
+    border-radius: 6px; /* Border radius of the handle */
+}
+
+.msctv::-webkit-scrollbar-thumb:hover {
+    background: #90f0ff; /* Color of the handle on hover */
+}
+  .title-lesson {
+    padding-top: 10px;
+    padding-bottom: 2px;
+    color: #171f44;
+    text-align: center;
+    font-size: 4em;
+  }
+  
+  /* Style each media element */
+  .media-element {
+    width: 20%;
+    margin: 3%;
+    margin-bottom: 5%;
+    padding: 10px;
+    box-shadow: 1px 3px rgba(58, 58, 58, 0.8);
+    border-radius: 10px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; /* Adjust margin as needed */
+    background-color: #a8f2fe; /* Change background color to black */
+  }
+  
+  .image-element {
+    width: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    flex: 0 0 auto;
+    margin-right: 10px; /* Adjust margin as needed */
+    
+  }
+
+ /* Style the media scroller */
+   .media-scroller {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+
+  .image-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+  .image-element:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+  
+  .image-element p {
+    color: #171f44;
+    text-align: center;
+  }
+  
+  .media-element:hover {
+    background: #90f0ff;
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+  
+  /* Change text color to white */
+  .media-element p {
+    color: #171f44;
+    font-size: 3em;
+  }
+
+
+  /* Style the video element */
+  .media-element video {
+    width: 100%; /* Ensure videos fill their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Style the title associated with each video */
+  .media-element .title {
+    font-size: 14px; /* Adjust title font size as needed */
+    margin-top: 5px; /* Adjust margin as needed */
+    text-align: center; /* Center the title */
+  }
+  
+  /* Style the scrollbar */
+  .image-scroller::-webkit-scrollbar,
+  .media-scroller::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  .msctv-scroller::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  /* Track */
+  .image-scroller::-webkit-scrollbar-track,
+  .media-scroller::-webkit-scrollbar-track {
+    background: #3e4c8c; /* Color of the track */
+    border-radius: 6px;
+  }
+
+  .msctv-scroller::-webkit-scrollbar-track {
+    background: #3e4c8c; /* Color of the track */
+    border-radius: 6px;
+  }
+  
+  /* Handle */
+  .image-scroller::-webkit-scrollbar-thumb,
+  .media-scroller::-webkit-scrollbar-thumb {
+    background: #a8f2fe; /* Color of the handle */
+    border-radius: 6px; /* Border radius of the handle */
+  }
+  
+  /* Handle on hover */
+  .image-scroller::-webkit-scrollbar-thumb:hover,
+  .media-scroller::-webkit-scrollbar-thumb:hover {
+    background: #90f0ff; /* Color of the handle on hover */
+  }

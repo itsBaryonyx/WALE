@@ -11,16 +11,18 @@ body {
     left: 5%;
     width: 90%;
     height: 82%;
+    padding: 2%;
     position: absolute;
     right: 2%;
     top: 15%;
-    
     border-radius: 10px; /* Optional: Add border-radius for rounded corners */
   }
 
   .learningimage {
     width: 100%;
     height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
     object-fit:fill;
     border-radius: 10px;
   }

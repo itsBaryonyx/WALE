@@ -1,0 +1,241 @@
+.signup-box {
+  position: relative;
+  text-align: center;
+  width: 380px;
+  height: 420px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.signup-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #00A2FF, #00A2FF, #00A2FF);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.signup-box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #00A2FF, #00A2FF, #00A2FF);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.signup-borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+
+.signup-borderLine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+}
+
+.signup-borderLine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, lightblue, lightblue, lightblue);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.signup-box form {
+  position: absolute;
+  inset: 4px;
+  background: #A8F2FE;
+  padding: 10%;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: bold; /* Make the text bold */
+  text-align: center;
+}
+
+.signup-inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.signup-inputBox input {
+  position: relative;
+  margin-top: -10px;
+  width: 100%;
+  padding: 20px 15px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: black;
+  font-size: 1em;
+  font-weight: bold; /* Make the text bold */
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.signup-inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: black;
+  font-size: 1em;
+  font-weight: bold; /* Make the text bold */
+  transition: 0.5s;
+}
+
+.signup-inputBox input:valid ~ span {
+  color: white;
+  font-size: 0.75em;
+  font-weight: bold;
+  transform: translateY(-34%);
+}
+
+.signup-inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.signup-inputBox .fa-eye,
+.signup-inputBox .fa-eye-slash {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  color: black; /* Default color */
+}
+
+.signup-inputBox input ~ i {
+  height: 50px;
+}
+
+.signup-box form .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-box form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: red;
+  text-decoration: none;
+}
+
+.signup-box form .links a:hover,
+.signup-box form .link a:nth-child(2) {
+  color: #fff;
+}
+
+.showpassword {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  font-size: 1em;
+}
+
+.showpassword-text {
+  color: black;
+  padding-left: 10px;
+}
+
+.signup-button {
+  align-self: center;
+  border: none;
+  outline: none;
+  padding: 3%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: bold; /* Make the text bold */
+  width: 70%;
+  margin-top: 2%;
+  color: black; /* Default text color */
+}
+
+.signup-button:hover {
+  background: #171f44;
+  color: white;
+  text-decoration-color: white;
+}
+
+.signup-box form input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+.signbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-button, .gmail-sign {
+  margin-right: 2%; /* Adjust the margin as needed */
+}
+
+.gmail-sign { 
+  width: 13%;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+.gmail-sign:hover {
+  transform: scale(1.5);
+  transition: .2s;
+}

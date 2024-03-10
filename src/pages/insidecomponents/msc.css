@@ -1,0 +1,162 @@
+.mainscreencalculator-bg1 {
+  background-color: rgba(255, 255, 255, 0.8); /* Set your desired background color */
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.8);
+  color: white;
+  left: 5%;
+  width: 90%;
+  height: 82%;
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.msc-bg3 {
+  position: absolute;
+  z-index: -1;
+  opacity: .25;
+  width: 100%;
+  height: 100%;
+  padding-top:-40%;
+  padding-right: 0;
+  object-fit:cover;
+  border-radius: 10px;
+}
+
+.mainscreencalculator-row {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  top: 20%;
+  overflow-y: scroll;
+  padding-left: 2%;
+  padding-right: 2%;
+  /* Scrollbar styles */
+}
+
+.mainscreencalculator-row::-webkit-scrollbar {
+  width: 15px; /* Width of the scrollbar */
+  border-radius: 6px;
+}
+
+.mainscreencalculator-row::-webkit-scrollbar-track {
+  background: #3e4c8c; /* Color of the track */
+  border-radius: 6px;
+}
+
+.mainscreencalculator-row::-webkit-scrollbar-thumb {
+  background: #a8f2fe; /* Color of the handle */
+  border-radius: 6px; /* Border radius of the handle */
+}
+
+.mainscreencalculator-row::-webkit-scrollbar-thumb:hover {
+  background: #90f0ff; /* Color of the handle on hover */
+}
+
+
+.msc-homep {
+  padding-top: 10px;
+  padding-bottom: 2px;
+  color: #171f44;
+  text-align: center;
+  font-size: 4em;
+}
+
+.mainscreencalculator-column1,
+.mainscreencalculator-column2,
+.mainscreencalculator-column3,
+.mainscreencalculator-column4,
+.mainscreencalculator-column5,
+.mainscreencalculator-column6 {
+  transition: .2s;
+  width: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  background-color: #A8F2FE;
+  border-radius: 6px;
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.8);
+}
+
+.mainscreencalculator-column1 img,
+.mainscreencalculator-column2 img,
+.mainscreencalculator-column3 img,
+.mainscreencalculator-column4 img,
+.mainscreencalculator-column5 img,
+.mainscreencalculator-column6 img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mainscreencalculator-column1:hover {
+  transform: scale(1.4);
+}
+
+.mainscreencalculator-column2:hover {
+  transform: scale(1.4);
+}
+
+.mainscreencalculator-column3:hover,
+.mainscreencalculator-column4:hover,
+.mainscreencalculator-column5:hover,
+.mainscreencalculator-column6:hover {
+  transform: scale(1.2);
+}
+
+.mainscreencalculator-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mainscreencalculator-column {
+  position: relative;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+.msc-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: calc(100% - 180px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+
+.mainscreencalculator-column1:hover .msc-tooltip,
+.mainscreencalculator-column2:hover .msc-tooltip,
+.mainscreencalculator-column3:hover .msc-tooltip,
+.mainscreencalculator-column4:hover .msc-tooltip,
+.mainscreencalculator-column5:hover .msc-tooltip,
+.mainscreencalculator-column6:hover .msc-tooltip {
+  visibility: visible;
+}
+
+.back-btn-mcalc{
+  position: absolute;
+  background-color: #A8F2FE;
+  border-radius: 5px;
+  width: 10%;
+  height: 10%;
+  bottom:2%;
+  position: absolute;
+  right:5%;
+}
+
+.back-btn-mcalc:hover{
+  background-color: #171f44;
+  color: white;
+  transform: scale(1.2);
+  transition: .2s;
+}

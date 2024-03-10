@@ -36,6 +36,8 @@ body {
 
 .navbaroutsidelogo:hover {
   color: white;
+  transition: .2s;
+  transform: scale(1.5);
 }
 
 .navbaroutsidebuttons {
@@ -64,6 +66,8 @@ body {
 /* Change text color to white on hover */
 .navbaroutsidebuttons a:hover {
   color: white;
+  transition: .2s;
+  transform: scale(1.5);
 }
 
 .login {
@@ -85,7 +89,9 @@ body {
 
 .signup {
   display: flex;
-  font-size: 1.2em;
+  font-size: 120%;
+  width: auto;
+  height: auto;
   background-color: #00A2FF; /* Set your desired background color */
   box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
   padding: 2px 20px;

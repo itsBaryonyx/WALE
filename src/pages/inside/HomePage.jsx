@@ -3,7 +3,6 @@
 import React from 'react';
 import './HomePage.css';
 import videobackground from '../../Assets/background/background.mp4'
-import LeftNavbar from '../insidecomponents/leftnavbar';
 import Mainscreenin from '../insidecomponents/mainscreenin';
 import NavbarInside from '../insidecomponents/navbarinside';
 
@@ -19,10 +18,7 @@ const HomePage = () => {
             <div>
             <NavbarInside />
             </div>
-            <div>
-            <LeftNavbar />
-            </div>
-            <div>
+            <div className="mainscreenin-homepage">
             <Mainscreenin />
             </div>
     </div>

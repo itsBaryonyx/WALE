@@ -26,9 +26,6 @@ export function LeftNavbar() {
           <Link to="/temperature" className="temperature">
             Temperature
           </Link>
-          <Link to="/meterreading" className="meterreading">
-            Meter Reading
-          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,70 @@
+/* msalist.css */
+
+.mainscreenincontainer-l {
+  background-color: rgba(255, 255, 255, 0.8); /* Set your desired background color */
+  box-shadow: 1px 3px (58, 58, 58, 0.8);
+  color: white;
+  left: 5%;
+  width: 90%;
+  height: 82%;
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+table {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  justify-content: center;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Set your desired background color */
+}
+
+th {
+  background-color:#90f0ff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  color: #171f44;
+}
+
+td {
+  padding: 10px;
+  color: #171f44;
+}
+
+.table-cell {
+  border-bottom: 1px solid #dddddd;
+}
+
+
+.edit-button,
+.delete-button,
+.save-button,
+.add-button {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #171f44;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-button:hover,
+.save-button:hover,
+.delete-button:hover,
+.add-button:hover {
+  background-color: white;
+  color: #171f44;
+}
+
+.add-button {
+  margin-top: 10px;
+}

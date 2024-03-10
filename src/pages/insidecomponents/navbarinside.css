@@ -21,64 +21,124 @@ body {
 }
 
 .logoinside {
-  height: 80px; /* Adjust the height to make the logo smaller */
-  position: absolute;
-  left: 2%;
+  height: 100%;
+  animation: rotateLogo 3s linear infinite; /* Add animation property */
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg); /* Rotate 0 degrees at start */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate 360 degrees at end */
+  }
 }
 
 .navbarinsidelogo {
   position: absolute;
+  left: 47.5%; /* Set left to 50% */
   text-decoration: none;
-  left: 10%;
-  font-size: 1.5em;
   color: #171F44;
+  font-size: 1.5em;
 }
+
 
 .navbarinsidelogo:hover {
   color: white;
+  transform: scale(1.5); /* Make logo slightly larger on hover */
 }
-
-.navbarinsidebuttons {
-  font-size: 1.2em;
-  position: absolute;
-  left: 50%; /* Center the buttons horizontally */
-  transform: translateX(-50%); /* Adjust to center precisely */
-}
-
-.homeinside {
-  padding-right: 20px;
-}
-
-.contactinside {
-  padding-left: 20px;
-}
-
-.navbarinsidebuttons a {
-  text-decoration: none;
-  color: #171F44; /* Set your default text color */
-  margin-left: 15px;
-  font-weight: bold;
-  transition: color 0.3s; /* Add smooth transition for color change */
-}
-
-/* Change text color to white on hover */
-.navbarinsidebuttons a:hover {
-  color: white;
-}
-
-.logout {
+.userinfo {
   display: flex;
-  font-size: 1.2em;
-  background-color: #00A2FF; /* Set your desired background color */
-  box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
-  padding: 2px 20px;
-  color: white;
-  position: absolute;
-  right: 2%;
-  top: 25%;
-  border-radius: 20px; 
+  align-items: center;
+  margin-right: 2%; /* Add margin between userinfo and logout button */
 }
 
-.logout:hover {
-  background-color: #171F44; /* Set your desired background color */
+.greet {
+  margin-right: 10px; /* Add margin between greet and profile */
+  font-size: 1.2em; /* Increase font size */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile {
+  width: 40px;
+  height: 40px; /* Set fixed width and height for profile image */
+  margin-right: 10px;
+}
+
+.profile img {
+  width: 100%; /* Make profile image fill its container */
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile img:hover{
+  transform: scale(1.2);
+  transition: .2s;
+}
+
+.logout-in {
+  text-decoration: none;
+  color: white;
+  background-color: #00A2FF;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.logout-in:hover {
+  background-color: #171F44;
+}
+@media (max-width: 768px) {
+  .navbarinside {
+    background-color: #A8F2FE; /* Set your desired background color */
+    box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
+    padding: 0px 20px;
+    width: 90%;
+    height: 10%;
+    position: fixed;
+    right: 5%;
+    top: 1%; /* Position navbar at the top */
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  
+  }
+
+  .greet {
+    display: none;
+  }
+  
+  .navbarinsidelogo {
+    position: absolute; /* Change position to relative for mobile screens */
+    left: 25%;
+    top: 25%;
+    transform: none; /* Remove transform for mobile screens */
+    margin-bottom: 20px; /* Add margin for better spacing */
+  }
+  
+  .userinfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile {
+    position: absolute;
+    right: 30%;
+    top: 15%;
+    margin-right: 0; /* Reset margin for profile */
+    margin-bottom: 10px; /* Add margin for better spacing */
+  }
+  .logout-in {
+    right: 2%;
+    top: 15%;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background-color: #00A2FF;
+    padding: 8px 20px;
+    border-radius: 20px;
+  }
+  
+  .logout-in:hover {
+    background-color: #171F44;
+  }
 }

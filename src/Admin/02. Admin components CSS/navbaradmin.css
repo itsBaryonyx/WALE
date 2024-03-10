@@ -1,0 +1,93 @@
+/* navbaradmin.css */
+
+body {
+  margin: 10px;
+  font-family: 'Baloo', sans-serif;
+}
+
+.admin-navbarinside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A8F2FE; /* Set your desired background color */
+  box-shadow: 1px 3px rgba(58, 58, 58, 0.2);
+  padding: 0px 20px;
+  width: 90%;
+  height: 10%;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+/* navbaradmin.css */
+
+.admin-logoinside {
+  height: 100%;
+  animation: rotateLogo 3s linear infinite; /* Add animation property */
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg); /* Rotate 0 degrees at start */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate 360 degrees at end */
+  }
+}
+
+.admin-navbarinsidelogo {
+  position: absolute;
+  left: 47.5%; /* Set left to 50% */
+  text-decoration: none;
+  color: #171F44;
+  font-size: 1.5em;
+}
+
+.admin-navbarinsidelogo:hover {
+  color: white;
+  transform: scale(1.5); /* Make logo slightly larger on hover */
+}
+
+.admin-userinfo {
+  display: flex;
+  align-items: center;
+  margin-right: 2%; /* Add margin between userinfo and logout button */
+}
+
+.admin-greet {
+  margin-right: 10px; /* Add margin between greet and profile */
+  font-size: 1.2em; /* Increase font size */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-profile {
+  width: 40px;
+  height: 40px; /* Set fixed width and height for profile image */
+  margin-right: 10px;
+}
+
+.admin-profile img {
+  width: 100%; /* Make profile image fill its container */
+  height: 100%;
+  border-radius: 50%;
+}
+
+.admin-profile img:hover {
+  transform: scale(1.2);
+  transition: .2s;
+}
+
+.admin-logout-in {
+  text-decoration: none;
+  color: white;
+  background-color: #00A2FF;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.admin-logout-in:hover {
+  background-color: #171F44;
+}

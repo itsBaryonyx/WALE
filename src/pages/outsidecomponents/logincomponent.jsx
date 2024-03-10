@@ -1,54 +1,68 @@
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import React, { useState } from 'react';
+import './logincomponent.css'; // Don't forget to create this CSS file
+import { auth, googleprovider } from "../../index"; // Import the Google Auth provider
 import { Link } from 'react-router-dom'; // Import Link
-import './LoginComponent.css'; // Don't forget to create this CSS file
+import gmailsign from "../../Assets/elements/gmail.png"
 
 const LoginComponent = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Check if username and password match the specified credentials
-    if (username === 'Admin' && password === '123') {
-      // Link to another page (you can replace '/home' with the desired path)
-      window.location.href = '/home';
-    } else {
-      // Add logic to handle incorrect credentials (e.g., display an error message)
-      console.log('Incorrect username or password');
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log('User signed in:', userCredential.user);
+      // Redirect to another page (you can replace '/home' with the desired path)
+      window.location.href = '/homepage';
+    } catch (error) {
+      console.error('Failed to sign in:', error.message);
+      setError('Incorrect email or password');
+    }
+  };
+
+  const signInWithGoogle = async () => {
+    try {
+      const userCredential = await signInWithPopup(auth, googleprovider);
+      console.log('User signed in with Google:', userCredential.user);
+      // Redirect to another page (you can replace '/home' with the desired path)
+      window.location.href = '/homepage';
+    } catch (error) {
+      console.error('Failed to sign in with Google:', error.message);
     }
   };
 
   return (
-    <div className="login-box">
-      <span className="login-borderLine"></span>
+    <div className="signup-box">
+      <span className="signup-borderLine"></span>
       <form onSubmit={handleLogin}>
-        <h2 className="login-h2">Student's Information</h2>
-        <div className="login-inputBox">
+        <h2 className="signup-h2">Student's Information</h2>
+        {error && <div className="error-message">{error}</div>}
+        <div className="signup-inputBox">
           <input
-            type="text"
-            required="required"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <span>First Name and Last Name</span>
           <i></i>
         </div>
-        <div className="login-inputBox">
+        <div className="signup-inputBox">
           <input
             type={showPassword ? 'text' : 'password'}
-            required="required"
+            placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <span>Password</span>
           <i></i>
-          {/* Add the checkbox for show/hide password */}
         </div>
         <div className="showpassword">
           <input
@@ -60,11 +74,18 @@ const LoginComponent = () => {
             <span className="showpassword-text">Show Password</span>
           </div>
         </div>
-        {/* Use Link instead of a submit button */}
-        <Link to="/home" className="start-learning">
+        <div className="signbtn">
+        <button type="submit" className="signup-button">
           Start Learning
-        </Link>
+        </button>
+        <button onClick={signInWithGoogle} className="gmail-sign">
+        <img src={gmailsign} alt="gmailsing-alt" />
+        </button>
+        </div>
       </form>
+      <Link to="/signup" className="signup-link">
+        Don't have an account? Sign Up
+      </Link>
     </div>
   );
 };

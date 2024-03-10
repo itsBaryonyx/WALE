@@ -28,7 +28,7 @@ export function NavbarOutside() {
           Log-In
         </Link>
         </div>
-        <div>
+        <div className="SP">
         <Link to="/signup" className="signup">
           Sign-Up
         </Link>

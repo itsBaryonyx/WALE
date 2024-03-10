@@ -1,0 +1,23 @@
+.media-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .media-element {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+  
+  .media-element video {
+    max-width: 100%; /* Ensure videos don't exceed their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .media-element .title {
+    font-size: 14px; /* Adjust title font size as needed */
+    margin-top: 5px; /* Adjust margin as needed */
+    text-align: center; /* Center the title */
+  }
+  

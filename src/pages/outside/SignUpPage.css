@@ -1,20 +1,49 @@
-/* SignUpPage.css */
+/* LogInPage.css */
 
 body {
-    width: 100%;
-        
-      }
-      
-      .video-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        object-fit: fill;
-        z-index: -1; /* Place the video behind other content */
-      }
-      
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.video-background-signup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(200px); /* Apply blur to the video background */
+}
+
+/* Add a class to the blurred content */
+.blurred-content {
+  filter: blur(200px); /* Apply blur to the other content */
+}
+
+/* Specify the styles for the login component container */
+.signup-component-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the LoginComponent is above the blurred content */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Specify the styles for other elements as needed */
+
+.navbarlandpage {
+  /* Add your styles for the navbar */
+}
+
+.mainscreenlandpage {
+  /* Add your styles for the mainscreen */
+}
+
+.Loging-outside {
+  /* Add your styles for the LoginComponent container */
+}
